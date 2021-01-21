@@ -1,5 +1,6 @@
 body {
     background-color: lightgray;
+    font-size: 0.9rem;
 }
 .container {
     padding-right: 0em;
@@ -13,13 +14,13 @@ body {
     box-shadow: 0 .2em 2em 0 rgba(0, 0, 0, 0.2), 0 .2em 2em 0 rgba(0, 0, 0, 0.19);
 }}
 .link-w a {
-    color: white;
+    color: rgb(72, 112, 100);
 }
 .link-w a:link, a:visited, a:active {
     text-decoration: none;
 }
 .link-w a:hover {
-    color: white;
+    color: rgb(72, 112, 100);
     text-decoration: underline;
 }
 .link-g a{
@@ -32,6 +33,16 @@ body {
     color: rgb(155, 128, 8);
     text-decoration: underline;
 }
+.card a {
+    color: white;
+}
+.card a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.card a:hover {
+    color: rgb(247, 226, 165);
+    text-decoration: none;
+}
 p b {
     color: gray;
 }
@@ -42,35 +53,27 @@ p b {
     color: #fff;
 }
 .photo {
-    margin-top: 1.5em;
+    margin-bottom: 1em;
     width: 100%;
+    background: repeating-linear-gradient(to left, rgba(0, 0, 0, 0),rgb(255, 255, 255), rgba(0, 0, 0, 0) 100%);
+}
+@media (max-width: 575px) {
+.photo {
+    width: 40%;
+}
 }
 .me {
     padding: 2em 2em 1.6em 2em;;
-    background-color: rgb(72, 112, 100);
+    color: rgb(72, 112, 100);
 }
 .hr-me {
     margin-top: 0em;
-    border-top: 1px solid white;
+    border-top: 1px solid rgb(72, 112, 100);;
 }
 .hr-data {
     margin-left: -1.55em;
     border-top: 2px solid lightgray;
 }
-.div-me {
-    padding: 2em 0em 4em 0em;
-}
-.div-me-end {
-    padding: 2em 2em 2em 2em;
-}
-@media  (min-width: 992px) {
-.div-me-end {
-    margin-top: 18em;
-}}
-@media  (min-width: 1201px) {
-.div-me-end {
-    margin-top: 12em;
-}}
 .name {
     text-align: center;
     padding: 2em 0em;
@@ -83,7 +86,7 @@ p b {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.row-left {
+.row-timeline {
     margin-bottom: 1.5em;
     color: gray;
 }
@@ -117,31 +120,21 @@ p b {
     background-color: rgb(155, 128, 8);
 }
 .data-title {
-    margin: 3em 0em 2em 0em;
+    margin: 0em 0em 2em 0em;
     padding: 1em 3em .5em .5em ;
-    background: repeating-linear-gradient(to left, rgb(155, 128, 8), rgba(155, 128, 8, 0.3) 100%);
+    background: repeating-linear-gradient(to left, rgb(155, 128, 8), rgba(155, 128, 8, 0.2) 100%);
     text-align: right;
 }
-.row-skills {
+.row-padd {
     padding: 0em 1.2em 1.5em 1.2em;
 }
 ul.timeline {
-    padding-right: 1em;
+    width: 95%;
     list-style-type: none;
     position: relative;
 }
-ul.timeline:before {
-    content: ' ';
-    background: lightgray;
-    display: inline-block;
-    position: absolute;
-    left: 1.8em;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-}
 ul.timeline > li {
-    padding-left: 0.8em;
+    padding-left: 0.75em;
 }
 ul.timeline > li:before {
     content: ' ';
@@ -153,14 +146,38 @@ ul.timeline > li:before {
     left: 1.25em;
     width: 1.25em;
     height: 1.25em;
+    margin-top: 0.15em;
     z-index: 400;
 }
 .projects {
     padding: 1em;
-    margin: 1em -1em 0em -2em;
+    margin: 1em -1em 0em -6em;
     background-color: rgb(165, 68, 62);
 }
 .project-name {
     color: rgb(72, 112, 100);
     font-weight: 600;
+}
+.card-deck {
+    margin: 0em 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: .5rem;
+}
+.card {
+    background-color: rgb(165, 68, 62);
+    color: white;
+    margin-bottom: 1rem;
+}
+.card-title {
+    margin-bottom: .5rem;
+}
+.card ul {
+    padding-left: 1rem;
+}
+.card-footer {
+    text-align: right;
+}
+.flex {
+    display: flex;
 }
