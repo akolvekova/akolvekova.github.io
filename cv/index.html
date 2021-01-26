@@ -13,37 +13,52 @@
 
     <link rel="stylesheet" href="cv.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="i18n.js"></script>
+
     <title>CV - Kolvekova</title>
 </head>
 
 <body>
     <div class="container text-secondary">
-        <section name="title">
+        <section>
             <div class="name text-inverse">
-                <p class="p-spacing">R e s u m e</p>
-                <h1>ANDREA KOLVEKOVA</h1>
-                <p>Programmer</p>
+                <ul class="lang-picker no-print">
+                    <li id="en">EN</li>
+                    <li id="sk">SK</li>
+                    <li><a class="a-print" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <p class="p-spacing" data-i18n="cv.header.title">R e s u m e</p>
+                <h1 data-i18n="cv.header.name">ANDREA KOLVEKOVA</h1>
+                <p data-i18n="cv.header.job">Programmer</p>
             </div>
         </section>
 
-        <section name="aboutme">
+        <section>
             <div class="row justify-content-center me">
                 <div class="col-lg-2 col-sm-4">
                     <img class="photo" src="cv-photo.png" alt="Me">
                 </div>
                 <div class="col-lg-6 col-sm-8">
-                    <h4><i class="fa fa-user" aria-hidden="true"></i>&nbsp;ABOUT ME</h4>
+                    <h4><i class="fa fa-user" aria-hidden="true"></i><span data-i18n="cv.about-me.title">&nbsp;ABOUT
+                            ME</span></h4>
                     <hr class="hr-me">
-                    <p class="mb-5">I am a programmer and I love my job. Really.</p>
-                    <p>Responsibility, reliability, positive approach to problem solving, accuracy, communication,
+                    <p class="mb-5" data-i18n="cv.about-me.text-1">I am a programmer and I love my job. Really.</p>
+                    <p data-i18n="cv.about-me.text-2">Responsibility, reliability, positive approach to problem solving,
+                        accuracy, communication,
                         teamwork and the ability to acquire new skills are my strengths.</p>
                 </div>
             </div>
         </section>
 
-        <section name="education">
+        <section>
             <div class="data-title text-inverse">
-                <h4>EDUCATION</h4>
+                <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
+                        data-i18n="cv.education.title">&nbsp;EDUCATION</span></h4>
+                <hr class="hr">
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -55,11 +70,11 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="link-g">
-                                        <a href="https://www.upjs.sk/" target="_blank"><b>Pavol Jozef Šafárik
-                                                University,
-                                                Kosice - Faculty of Science</b></a>
+                                        <a href="https://www.upjs.sk/" target="_blank"><b
+                                                data-i18n="cv.education.text-1">Pavol Jozef Šafárik
+                                                University, Kosice - Faculty of Science</b></a>
                                     </div>
-                                    Informatics
+                                    <span data-i18n="cv.education.text-1a">Informatics</span>
                                 </div>
                             </div>
                         </li>
@@ -70,11 +85,11 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="link-g">
-                                        <a href="https://www.upjs.sk/" target="_blank"><b>Pavol Jozef Šafárik
-                                                University,
-                                                Kosice - Faculty of Science</b></a>
+                                        <a href="https://www.upjs.sk/" target="_blank"><b
+                                                data-i18n="cv.education.text-2">Pavol Jozef Šafárik
+                                                University, Kosice - Faculty of Science</b></a>
                                     </div>
-                                    Mathematics - Chemistry
+                                    <span data-i18n="cv.education.text-2a">Mathematics - Chemistry</span>
                                 </div>
                             </div>
                         </li>
@@ -84,7 +99,7 @@
                                     1986-1990
                                 </div>
                                 <div class="col-sm-9">
-                                    <b>Martin Kukučín Gymnázium, Revuca</b>
+                                    <b data-i18n="cv.education.text-3">Martin Kukučín Gymnázium, Revuca</b>
                                 </div>
                             </div>
                         </li>
@@ -93,12 +108,14 @@
             </div>
         </section>
 
-        <section name="skills">
+        <section>
             <div class="data-title text-inverse">
-                <h4>SKILLS</h4>
+                <h4><i class="fa fa-cogs" aria-hidden="true"></i><span data-i18n="cv.skills.title">&nbsp;SKILLS</span>
+                </h4>
+                <hr class="hr">
             </div>
             <div class="row justify-content-center row-padd">
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-2 col-sm-3 col-6">
                     Java, J2EE
                     <div class="progress">
                         <div class="progress-bar-1" role="progressbar" style="width: 75%" aria-valuenow="75"
@@ -114,6 +131,8 @@
                         <div class="progress-bar-1" role="progressbar" style="width: 80%" aria-valuenow="80"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+                </div>
+                <div class="col-lg-2 col-sm-3 col-6">
                     PHP
                     <div class="progress">
                         <div class="progress-bar-1" role="progressbar" style="width: 50%" aria-valuenow="50"
@@ -130,7 +149,7 @@
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-2 col-sm-3 col-6">
                     Eclipse
                     <div class="progress">
                         <div class="progress-bar-2" role="progressbar" style="width: 75%" aria-valuenow="75"
@@ -146,17 +165,19 @@
                         <div class="progress-bar-2" role="progressbar" style="width: 50%" aria-valuenow="50"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    English
+                </div>
+                <div class="col-lg-2 col-sm-3 col-6">
+                    <span data-i18n="cv.skills.en">English</span>
                     <div class="progress">
                         <div class="progress-bar-3" role="progressbar" style="width: 40%" aria-valuenow="40"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    Russian
+                    <span data-i18n="cv.skills.ru">Russian</span>
                     <div class="progress">
                         <div class="progress-bar-3" role="progressbar" style="width: 20%" aria-valuenow="20"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    German
+                    <span data-i18n="cv.skills.de">German</span>
                     <div class="progress">
                         <div class="progress-bar-3" role="progressbar" style="width: 20%" aria-valuenow="20"
                             aria-valuemin="0" aria-valuemax="100"></div>
@@ -165,11 +186,12 @@
             </div>
         </section>
 
-        <section name="experience">
+        <section>
             <div class="data-title text-inverse">
-                <h4>WORK EXPERIENCE</h4>
+                <h4><i class="fa fa-building" aria-hidden="true"></i><span data-i18n="cv.experience.title">&nbsp;WORK
+                        EXPERIENCE</span></h4>
+                <hr class="hr">
             </div>
-
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <ul class="timeline">
@@ -180,11 +202,13 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="link-g">
-                                        <a href="http://tax.novitech.sk/" target="_blank"><b>Novitech Tax, s.r.o.,
+                                        <a href="http://tax.novitech.sk/" target="_blank"><b
+                                                data-i18n="cv.experience.text">Novitech Tax, s.r.o.,
                                                 Kosice</b></a>
                                     </div>
-                                    <div>Web applications development in Java, PHP, Angular</div>
-                                    <div>4GL procedures development</div>
+                                    <div data-i18n="cv.experience.text-a">Web applications development in Java, PHP,
+                                        Angular</div>
+                                    <div data-i18n="cv.experience.text-b">4GL procedures development</div>
                                 </div>
                             </div>
 
@@ -192,34 +216,38 @@
                     </ul>
                 </div>
             </div>
-            <div class="card-deck">
+            <div class="card-deck no-print">
                 <div class="card">
-                    <a href="http://www.tax.novitech.sk/index.php/en/vref-en" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="http://www.tax.novitech.sk/index.php/en/vref-en" target="_blank">
                             <h6 class="card-title">EU VAT Refund</h6>
-                            <p class="card-subtitle mb-2">EU VAT refund support system</p>
-                            <p class="card-text"><small>FR SR</small></p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Web application development (JSF, Java 8, Oracle)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2011-2021
-                        </div>
-                    </a>
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.vref.subscription">EU VAT
+                                refund support system</p>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.vref.customer">FR SR</small></p>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.vref.text-1">Web application development and
+                                maintenance (JSF, Java 8, Oracle)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2011-2021
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
                         <h6 class="card-title">SATESOP2</h6>
-                        <p class="card-subtitle mb-2">The Warehouses Module</p>
-                        <p class="card-text"><small>SKODA, CR</small>
+                        <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.satesop.subscription">The
+                            Warehouses Module</p>
+                        <p class="card-text"><small data-i18n="cv.experience.cards.satesop.customer">SKODA, CR</small>
                         </p>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li>Implementation of project modules (Java)</li>
+                            <li data-i18n="cv.experience.cards.satesop.text-1">Project frontend implementation (Angular
+                                5, Bootstrap 4)</li>
                         </ul>
                     </div>
                     <div class="card-footer">
@@ -227,34 +255,39 @@
                     </div>
                 </div>
                 <div class="card">
-                    <a href="https://cbc.virtualtours.city/" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="https://cbc.virtualtours.city/" target="_blank">
                             <h6 class="card-title">CBC Tours</h6>
-                            <p class="card-subtitle mb-2">Cross-border HU-SK virtual tours
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.cbc.subscription">Cross-border
+                                HU-SK virtual tours
                             </p>
-                            <p class="card-text"><small>Novitech, a.s., Košice</small>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.cbc.customer">Novitech, a.s.,
+                                    Kosice</small>
                             </p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Project frontend implementation (Bootstrap 4, jQuery 3)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2019-2020
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.cbc.text-1">Project frontend implementation
+                                (Bootstrap 4, jQuery 3)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2019-2020
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
                         <h6 class="card-title">AISSE</h6>
-                        <p class="card-subtitle mb-2">Evidence IS of personal documents in the Czech
-                            Republic - module Civic cards</p>
-                        <p class="card-text"><small>KOMIX, ČR</small></p>
+                        <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.aisse.subscription">IS of personal
+                            documents in the Czech
+                            Republic - module Civic Cards</p>
+                        <p class="card-text"><small data-i18n="cv.experience.cards.aisse.customer">KOMIX, CR</small></p>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li>Project backend implementation (Java 8)</li>
+                            <li data-i18n="cv.experience.cards.aisse.text-1">Project backend implementation (Java 8)
+                            </li>
                         </ul>
                     </div>
                     <div class="card-footer">
@@ -262,136 +295,268 @@
                     </div>
                 </div>
                 <div class="card">
-                    <a href="https://www.novitech.sk/index.php/en/events/242-project-i3d-services" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="https://www.novitech.sk/index.php/en/events/242-project-i3d-services" target="_blank">
                             <h6 class="card-title">I3D</h6>
-                            <p class="card-subtitle mb-2">Application of virtual and
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.i3d.subscription">Application
+                                of virtual and
                                 augmented reality in industrial smart workplaces</p>
-                            <p class="card-text"><small>Novitech, a.s., Košice</small>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.i3d.customer">Novitech, a.s.,
+                                    Kosice</small>
                             </p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Project frontend implementation (Angular 5, Bootstrap 3)</li>
-                                <li>Project backend implementation (PHP)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2018-2019
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.i3d.text-1">Project frontend implementation (Angular
+                                5, Bootstrap 3)</li>
+                            <li data-i18n="cv.experience.cards.i3d.text-2">Project backend implementation (PHP)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2018-2019
+                    </div>
                 </div>
                 <div class="card">
-                    <a href="https://www.predplatenaelektrina.sk/assets/top.html" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="https://www.predplatenaelektrina.sk/assets/top.html" target="_blank">
                             <h6 class="card-title">USDE</h6>
-                            <p class="card-subtitle mb-2">The management
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.usde.subscription">The
+                                management
                                 of the electricity demand and distribution system</p>
-                            <p class="card-text"><small>Východoslovenská distribučná, a.s.,
-                                    Košice</small>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.usde.customer">Východoslovenská
+                                    distribučná, a.s.,
+                                    Kosice</small>
                             </p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Project frontend implementacion (Angular 5, Bulma)</li>
-                                <li>Project backend implementation (Firebase Realtime Database)</li>
-                                <li>Implementation of the main website</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2018-2018
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.usde.text-1">Project frontend implementacion (Angular
+                                5, Bulma)</li>
+                            <li data-i18n="cv.experience.cards.usde.text-2">Project backend implementation (Firebase
+                                Realtime Database)</li>
+                            <li data-i18n="cv.experience.cards.usde.text-3">Implementation of the main website</li>
+                            <a href="https://www.predplatenaelektrina.sk/assets/top.html" target="_blank">
+                                <i class="fa fa-external-link"></i></a>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2018-2018
+                    </div>
                 </div>
                 <div class="card">
-                    <a href="https://virtualtour.city/index.php" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="https://virtualtour.city/index.php" target="_blank">
                             <h6 class="card-title">NUVIA</h6>
-                            <p class="card-subtitle mb-2">Virtual tours web application</p>
-                            <p class="card-text"><small>Novitech, a.s., Košice</small></p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Project frontend implementation (Bootstrap 3)</li>
-                                <li>Project backend implementation (PHP)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2016-2019
-                        </div>
-                    </a>
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.nuvia.subscription">Virtual
+                                tours web application</p>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.nuvia.customer">Novitech, a.s.,
+                                    Kosice</small></p>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.nuvia.text-1">Project frontend implementation
+                                (Bootstrap 3)</li>
+                            <li data-i18n="cv.experience.cards.nuvia.text-2">Project backend implementation (PHP)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2016-2019
+                    </div>
                 </div>
                 <div class="card">
-                    <a href="http://www.tax.novitech.sk/index.php/en/solutions-and-services/exis" target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="http://www.tax.novitech.sk/index.php/en/solutions-and-services/exis" target="_blank">
                             <h6 class="card-title">EXIS</h6>
-                            <p class="card-subtitle mb-2">Information system for distrainers</p>
-                            <p class="card-text"><small>Exekútorsky úrad Kováč Ladislav, Košice</small>
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.exis.subscription">Information
+                                system for distrainers</p>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.exis.customer">Exekútorský úrad
+                                    Kováč Ladislav, Kosice</small>
                             </p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Implementation of project modules (Java)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2008-2010
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.exis.text-1">Implementation of project modules (Java)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2008-2010
+                    </div>
                 </div>
                 <div class="card">
-                    <a href="http://www.tax.novitech.sk/index.php/en/informacny-system-danovej-spravy-apv-dis-2"
-                        target="_blank">
-                        <div class="card-header">
+                    <div class="card-header">
+                        <a href="http://www.tax.novitech.sk/index.php/en/informacny-system-danovej-spravy-apv-dis-2"
+                            target="_blank">
                             <h6 class="card-title">APV DIS</h6>
-                            <p class="card-subtitle mb-2">Tax information system of Slovak Republic
+                            <p class="card-subtitle mb-2" data-i18n="cv.experience.cards.apvdis.subscription">Tax
+                                information system of Slovak Republic</p>
+                            <p class="card-text"><small data-i18n="cv.experience.cards.apvdis.customer">Tax Directorate
+                                    of the Slovak Republic</small>
                             </p>
-                            <p class="card-text"><small>Tax Directorate of the Slovak Republic</small>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Report programming (4gl)</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            2006-2010
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li data-i18n="cv.experience.cards.apvdis.text-1">Report programming (4gl)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        2006-2010
+                    </div>
                 </div>
             </div>
+            <table class="table table-striped table-m print-only">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" data-i18n="cv.experience.table.project">Project</th>
+                        <th scope="col" data-i18n="cv.experience.table.subscription">Subscription</th>
+                        <th scope="col" data-i18n="cv.experience.table.customer">Customer</th>
+                        <th scope="col" data-i18n="cv.experience.table.specification">Specification</th>
+                        <th scope="col" data-i18n="cv.experience.table.years">Years</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">EU VAT Refund</th>
+                        <td data-i18n="cv.experience.cards.vref.subscription"></td>
+                        <td data-i18n="cv.experience.cards.vref.customer"></td>
+                        <td data-i18n="cv.experience.cards.vref.text-1"></td>
+                        <td>2011-2021</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SATESOP2</th>
+                        <td data-i18n="cv.experience.cards.satesop.subscription"></td>
+                        <td data-i18n="cv.experience.cards.satesop.customer"></td>
+                        <td data-i18n="cv.experience.cards.satesop.text-1"></td>
+                        <td>2019-2020</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CBC Tours</th>
+                        <td data-i18n="cv.experience.cards.cbc.subscription"></td>
+                        <td data-i18n="cv.experience.cards.cbc.customer"></td>
+                        <td data-i18n="cv.experience.cards.cbc.text-1"></td>
+                        <td>2019-2020</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">AISSE</th>
+                        <td data-i18n="cv.experience.cards.aisse.subscription"></td>
+                        <td data-i18n="cv.experience.cards.aisse.customer"></td>
+                        <td data-i18n="cv.experience.cards.aisse.text-1"></td>
+                        <td>2018-2019</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I3D</th>
+                        <td data-i18n="cv.experience.cards.i3d.subscription"></td>
+                        <td data-i18n="cv.experience.cards.i3d.customer"></td>
+                        <td>
+                            <div data-i18n="cv.experience.cards.i3d.text-1"></div>
+                            <div data-i18n="cv.experience.cards.i3d.text-2"></div>
+                        </td>
+                        <td>2018-2019</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">USDE</th>
+                        <td data-i18n="cv.experience.cards.usde.subscription"></td>
+                        <td data-i18n="cv.experience.cards.usde.customer"></td>
+                        <td>
+                            <div data-i18n="cv.experience.cards.usde.text-1"></div>
+                            <div data-i18n="cv.experience.cards.usde.text-2"></div>
+                            <div data-i18n="cv.experience.cards.usde.text-3"></div>
+                        </td>
+                        <td>2018-2018</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">NUVIA</th>
+                        <td data-i18n="cv.experience.cards.nuvia.subscription"></td>
+                        <td data-i18n="cv.experience.cards.nuvia.customer"></td>
+                        <td>
+                            <div data-i18n="cv.experience.cards.nuvia.text-1"></div>
+                            <div data-i18n="cv.experience.cards.nuvia.text-2"></div>
+                        </td>
+                        <td>2016-2019</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">EXIS</th>
+                        <td data-i18n="cv.experience.cards.exis.subscription"></td>
+                        <td data-i18n="cv.experience.cards.exis.customer"></td>
+                        <td data-i18n="cv.experience.cards.exis.text-1"></td>
+                        <td>2008-2010</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">APV DIS</th>
+                        <td data-i18n="cv.experience.cards.apvdis.subscription"></td>
+                        <td data-i18n="cv.experience.cards.apvdis.customer"></td>
+                        <td data-i18n="cv.experience.cards.apvdis.text-1"></td>
+                        <td>2006-2010</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <section name="contacts">
+        <section>
+            <div class="data-title text-inverse">
+                <h4><i class="fa fa-plus" aria-hidden="true"></i><span
+                        data-i18n="cv.supplement.title">&nbsp;SUPPLEMENT</span></h4>
+                <hr class="hr">
+            </div>
             <div class="row justify-content-center me">
-                <div class="col-lg-8">
-                    <h4><i class="fa fa-sticky-note" aria-hidden="true"></i>&nbsp;CONTACTS</h4>
-                    <hr class="hr-me">
-                    <div class="row row-me">
-                        <div class="col-sm-1 offset-sm-3 col-2 offset-1">
-                            <i class="fa fa-phone fa-me" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-sm-5 col-8 link-w">
-                            <a href="tel:+421949287342" class="link-w">+421 949 287 342</a>
-                        </div>
+                <div class="col-lg-8 suppl">
+                    <div>
+                        <span data-i18n="cv.supplement.text">My learning project as an example of my work</span>
                     </div>
-                    <div class="row row-me">
-                        <div class="col-sm-1 offset-sm-3 col-2 offset-1">
-                            <i class="fa fa-envelope fa-me" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-sm-5 col-8 link-w">
-                            <a href="mailto:akolvekova@gmail.com">akolvekova@gmail.com</a>
-                        </div>
+                    <div>
+                        (Angular 10, Bootstrap 3)
                     </div>
-                    <div class="row row-me">
-                        <div class="col-sm-1 offset-sm-3 col-2 offset-1">
-                            <i class="fa fa-map-marker fa-me" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-sm-5 col-8 link-w">
-                            <a href="http://maps.google.com/?q=Nad%20Belogradom%206%20Kosice" target="_blank">
-                                <div>Nad Belogradom 6</div>
-                                <div>04018 Kosice, Slovakia</div>
+                    <div class="link-s suppl-mt">
+                        <h4><a href="https://akolvekova.github.io/dovolenky/" target="_blank">
+                                <i class="fa fa-external-link"></i> Dovolenky</a></h4>
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <div class="row justify-content-center contacts">
+                <div class="col-lg-10">
+                    <h4><i class="fa fa-sticky-note" aria-hidden="true"></i><span
+                            data-i18n="cv.contacts.title">&nbsp;CONTACTS</span></h4>
+                    <hr class="hr-contacts">
+                    <div class="row">
+                        <div class="col-lg-4 mb-3 link-w">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 col-md-5 col-sm-6 col-9">
+                                    <a href="tel:+421949287342" class="link-w">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        +421 949 287 342
+                                    </a>
+                                </div>
+                            </div>
                             </a>
+                        </div>
+                        <div class="col-lg-4 mb-3 link-w">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 col-md-5 col-sm-6 col-9">
+                                    <a href="mailto:akolvekova@gmail.com">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        akolvekova@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3 link-w">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 col-md-5 col-sm-6 col-9">
+                                    <a href="http://maps.google.com/?q=Nad%20Belogradom%206%20Kosice" target="_blank">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        Nad Belogradom 6,&nbsp;
+                                        <span data-i18n="cv.contacts.address-1">04018 Kosice</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

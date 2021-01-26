@@ -1,6 +1,6 @@
 body {
     background-color: lightgray;
-    font-size: 0.9rem;
+    /*font-size: 0.9rem;*/
 }
 .container {
     padding-right: 0em;
@@ -14,14 +14,15 @@ body {
     box-shadow: 0 .2em 2em 0 rgba(0, 0, 0, 0.2), 0 .2em 2em 0 rgba(0, 0, 0, 0.19);
 }}
 .link-w a {
-    color: rgb(72, 112, 100);
+    color: white;
+    font-size: 0.9rem;
 }
 .link-w a:link, a:visited, a:active {
     text-decoration: none;
 }
 .link-w a:hover {
-    color: rgb(72, 112, 100);
-    text-decoration: underline;
+    color: rgb(247, 226, 165);
+    text-decoration: none;
 }
 .link-g a{
     color: gray;
@@ -32,6 +33,17 @@ body {
 .link-g a:hover {
     color: rgb(155, 128, 8);
     text-decoration: underline;
+}
+.link-s a {
+    color: rgb(165, 68, 62);
+}
+.link-s a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.link-s a:hover {
+    color: rgb(165, 68, 62);
+    text-decoration: none;
+    font-weight: 650;
 }
 .card a {
     color: white;
@@ -55,56 +67,52 @@ p b {
 .photo {
     margin-bottom: 1em;
     width: 100%;
-    background: repeating-linear-gradient(to left, rgba(0, 0, 0, 0),rgb(255, 255, 255), rgba(0, 0, 0, 0) 100%);
 }
 @media (max-width: 575px) {
 .photo {
     width: 40%;
 }
 }
+.suppl {
+    margin-bottom: 1rem;
+    color: gray;
+    text-align: center;
+}
+.suppl-mt {
+    margin-top: 1em;
+}
 .me {
-    padding: 2em 2em 1.6em 2em;;
+    padding: 2em 2em 1.6em 2em;
     color: rgb(72, 112, 100);
 }
 .hr-me {
     margin-top: 0em;
-    border-top: 1px solid rgb(72, 112, 100);;
+    border-top: 1px solid rgb(72, 112, 100);
 }
-.hr-data {
-    margin-left: -1.55em;
-    border-top: 2px solid lightgray;
+.hr {
+    display: none;
+}
+.hr-contacts {
+    margin-top: 0em;
+    border-top: 1px solid white;
 }
 .name {
     text-align: center;
-    padding: 2em 0em;
+    padding: 1em 0em 3em 0em;
+    margin-right: 0em;
+    margin-left: 0em;
     background-color: rgb(165, 68, 62);
 }
-.row-me {
-    padding-bottom: .5em;
-}
-.row-hobbies {
-    margin-top: 1em;
-    margin-bottom: 1em;
+.contacts {
+    color: white;
+    padding: 2em 0em;
+    margin-right: 0em;
+    margin-left: 0em;
+    background-color: rgb(72, 112, 100);
 }
 .row-timeline {
     margin-bottom: 1.5em;
     color: gray;
-}
-.row-project {
-    margin-top: .5em;
-}
-.row-languages {
-    margin-top: 1em;
-}
-.project-padding {
-    padding-left: 2em;
-}
-.fa-me {
-    width: 1em;
-    text-align: center;
-}
-.fa-color {
-    color: rgb(72, 112, 100);
 }
 .progress {
     margin-bottom: .5em;
@@ -144,25 +152,19 @@ ul.timeline > li:before {
     border-radius: 50%;
     border: 4px solid rgb(72, 112, 100);
     left: 1.25em;
-    width: 1.25em;
-    height: 1.25em;
-    margin-top: 0.15em;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.3em;
     z-index: 400;
 }
-.projects {
-    padding: 1em;
-    margin: 1em -1em 0em -6em;
-    background-color: rgb(165, 68, 62);
-}
-.project-name {
-    color: rgb(72, 112, 100);
-    font-weight: 600;
-}
 .card-deck {
-    margin: 0em 1em;
+    margin: 0em 1em 1em 1em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-gap: .5rem;
+}
+.card-deck .card {
+    margin-bottom: 1em;
 }
 .card {
     background-color: rgb(165, 68, 62);
@@ -175,9 +177,85 @@ ul.timeline > li:before {
 .card ul {
     padding-left: 1rem;
 }
+.card ul li {
+    margin-bottom: .5rem;
+}
 .card-footer {
     text-align: right;
 }
-.flex {
-    display: flex;
+.lang-picker {
+    margin: 0em 2em 2em 0em;
+	text-align: right;
+}
+.lang-picker li {
+	list-style: none;
+	display: inline-block;
+	cursor: pointer;
+}
+.lang-picker li.selected {
+	font-weight: 600;
+	border-bottom: 2px solid white;
+}
+.a-print {
+    margin: 0em 0em 0em 1em;
+    font-size: 1.5em;
+}
+.print-only {
+    display: none;
+}
+@media print {
+body {
+    background-color: white;
+}
+.name {
+    color: black;
+    background-color: white;
+}
+.photo {
+    width: 50%;
+}
+.me {
+    padding: 0em 2em 0em 2em;
+    color: black;
+}
+.data-title {
+    margin: 1em 0em 2em 0em;
+    padding: 0em 0em 0em 1em;
+    color: black;
+    background: none;
+    text-align: left;
+}
+.row-timeline {
+    margin-bottom: 0.5em;
+    color: black;
+}
+.link-g a, .link-w a {
+    color: black;
+}
+.row-padd {
+    color: black;
+}
+.table-m {
+    margin: 2em;
+    width: auto;
+}
+.suppl {
+    color: black;
+}
+.contacts {
+    color: black;
+    background-color: white;
+}
+.hr {
+    display: block;
+}
+.hr-me, .hr, .hr-contacts {
+    border-top: 1px solid black;
+}
+.no-print {
+    display: none;
+}
+.print-only {
+    display: block;
+}
 }
