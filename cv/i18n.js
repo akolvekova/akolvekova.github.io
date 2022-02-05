@@ -156,8 +156,8 @@
 			            "sk": "Novitech, a.s., Košice"
                     },
                     "text-1": {
-                        "en": "Project frontend implementation (Angular 5, Bootstrap 3)",
-			            "sk": "Implementácia frontendu projektu (Angular 5, Bootstrap 3)"
+                        "en": "Project frontend implementation (Angular 7, Bulma)",
+			            "sk": "Implementácia frontendu projektu (Angular 7, Bulma)"
                     },
                     "text-2": {
                         "en": "Project backend implementation (PHP)",
